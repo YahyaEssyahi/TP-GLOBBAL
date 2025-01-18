@@ -1,0 +1,77 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #009dff;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    margin-top: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Thèmes */
+body.light {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.blue {
+    background-color: #0057b8;
+    color: #fff;
+}
+
+body.red {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+body.yellow {
+    background-color: #fbc02d;
+    color: #000;
+}
+
+button:hover {
+    opacity: 0.8;
+}

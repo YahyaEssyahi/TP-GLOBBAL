@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Réservations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion des Réservations</h1>
+        <div>
+            <button onclick="switchTheme('light')">Thème Clair</button>
+            <button onclick="switchTheme('dark')">Thème Sombre</button>
+            <button onclick="switchTheme('blue')">Thème Bleu</button>
+            <button onclick="switchTheme('red')">Thème Rouge</button>
+            <button onclick="switchTheme('yellow')">Thème Jaune</button>
+        </div>
+    </header>
+    
+    <main>
+        <section id="clients">
+            <h2>Clients</h2>
+            <form id="clientForm">
+                <label for="fullName">Nom Complet:</label>
+                <input type="text" id="fullName" required>
+                
+                <label for="cin">CIN:</label>
+                <input type="text" id="cin" required>
+                
+                <label for="studentStatus">Statut Étudiant:</label>
+                <select id="studentStatus" required>
+                    <option value="etudiant">Étudiant</option>
+                    <option value="non-etudiant">Non Étudiant</option>
+                </select>
+                
+                <button type="submit">Ajouter Client</button>
+            </form>
+            
+            <h3>Liste des Clients</h3>
+            <ul id="clientList"></ul>
+        </section>
+
+        <section id="reservation">
+            <h2>Réservation</h2>
+            <form id="reservationForm">
+                <label for="clientSelect">Choisir un Client:</label>
+                <select id="clientSelect" required>
+                    
+                </select>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" required>
+
+                <label for="classSelect">Classe:</label>
+                <select id="classSelect" required>
+                    <option value="economique">Économique</option>
+                    <option value="affaire">Affaires</option>
+                    <option value="premiere">Première Classe</option>
+                </select>
+
+                <button type="submit">Réserver</button>
+            </form>
+
+            <h3>Prix Total: <span id="totalPrice">0</span> €</h3>
+        </section>
+
+        <section id="tickets">
+            <h2>Tickets</h2>
+            <table id="reservationTable">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Destination</th>
+                        <th>Classe</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les réservations seront affichées ici -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gestion des Réservations. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
